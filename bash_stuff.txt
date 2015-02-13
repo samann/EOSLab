@@ -3,33 +3,20 @@ if [ -f  /lab/DefaultSetups/bashrc ]; then
 
 fi
 alias sl='ls'
-alias clisp='/usr/local/clisp-2.49/bin/clisp'
-alias e='emacsclient --no-wait'
-alias emacs='emacs -nw'
-function s {
-	/home/amanns/sublime_text_3/sublime_text "$1";
-}
-function mars {
-    java -jar /home/kurmasz/public/CS451/bin/Mars4_4.jar;
-}
-function as {
-    cd /home/amanns/gvsu/Winter2015/ && /home/amanns/bin/Atom/atom "$1";
-}
+
 function rancat(){
     wget -O catpic http://placekitten.com/$[500 + RANDOM % 500]
     lpr -P arch catpic;
 }
+
 function revtext(){
     cat "$1" | rev;
 }
-function there(){
-    find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u;
-}
-xrdb remove ~/.XResources
 
-#force_color_prompt=yes
+function there(){
+    find . "$1" | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u;
+}
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-
-fac() { (echo 1; seq $1) | paste -s -d\* | bc; }
