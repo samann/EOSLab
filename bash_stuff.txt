@@ -9,12 +9,25 @@ alias sl='ls'
 # add colors to ls and grep
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias open='xdg-open'
 
 #########################FUNCTIONS#####################################
 # This function will print out a random cat picture in ARCH lab (usage: rancatarch)
 function rancatarch(){
     wget -O catpic http://placekitten.com/$[500 + RANDOM % 500]
     lpr -P arch catpic;
+}
+# this will make man pages easier to read
+function man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
 }
 
 # This function will print out a random cat picture in EOS lab (usage: rancateos)
