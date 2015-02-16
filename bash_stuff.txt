@@ -9,16 +9,15 @@ alias sl='ls'
 # add colors to ls and grep
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+# open any file with app of your choice
 alias open='xdg-open'
 
 #########################FUNCTIONS#####################################
-# This function will print out a random cat picture in ARCH lab (usage: rancatarch)
-function rancatarch(){
-    wget -O catpic http://placekitten.com/$[500 + RANDOM % 500]
-    lpr -P arch catpic;
-}
+
 # this will make man pages easier to read
-function man() {
+function man()
+{
     env \
         LESS_TERMCAP_mb=$(printf "\e[1;31m") \
         LESS_TERMCAP_md=$(printf "\e[1;31m") \
@@ -30,20 +29,24 @@ function man() {
         man "$@"
 }
 
-# This function will print out a random cat picture in EOS lab (usage: rancateos)
-function rancateos(){
-    wget -O catpic http://placekitten.com/$[500 + RANDOM % 500]
-    lpr -P eos catpic;
+# this will find any string in a certain file type (useage: search "string_name" file_type
+function search()
+{
+    grep -l ""$1"" *"$2"*;
 }
+
 # This function will reverse the text off any file and display it (usage: revtext file_name)
-function revtext(){
+function revtext()
+{
     cat "$1" | rev;
 }
 
 # this will list out your files in a tree for easier viewing (usage: list dir_name)
-function list(){
+function list()
+{
     ls -R "$1" | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
 }
+
 # changes the prompt to show your username and path that you're currently in
 PS1="[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
 
