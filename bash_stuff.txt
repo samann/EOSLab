@@ -28,6 +28,17 @@ function man()
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
         man "$@"
 }
+# this will make a backup file of anytype
+function old()
+{
+    mv "$1" "$1.old";
+}
+
+# this will undo a backup and restore the file
+function unold()
+{
+    mv "$1" "${1%.old}";
+}
 
 # this will find any string in a certain file type (useage: search "string_name" file_type
 function search()
