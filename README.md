@@ -6,7 +6,6 @@
 
 ### Step two
     cp ~/.bashrc ~/.bashrc.old
-# DO NOT EXIT THE TERMINAL after doing this
 
 ### Step three
     git clone https://github.com/samann/EOSLab.git
