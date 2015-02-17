@@ -2,10 +2,11 @@
 ## Brought to you by Spencer AKA The Destroyer
 
 ### Step one
-    cp ~/.bashrc ~/.bashrc.old
+    mkdir ~/bin && cd ~/bin
 
 ### Step two
-    mkdir ~/bin && cd ~/bin
+    cp ~/.bashrc ~/.bashrc.old
+# DO NOT EXIT THE TERMINAL after doing this
 
 ### Step three
     git clone https://github.com/samann/EOSLab.git
@@ -14,7 +15,18 @@
     cd EOSLab && cat bash_stuff.txt
 
 ### Step five
-    Watch and learn
+    tmux
+#### now hit CTRL+B then wait then click SHIFT + 5
+##### this should split the screen in half you make want to make the termianal fullscreen
 
-## Step six
+### Step six
+    vim ~/.bashrc
+    CTRL+B (left arrow key)
+    vim bash_stuff.txt
+    CTRL+B (right arrow key)
+
+### Step seven
+    Watch and learn
+    
+## Finally
     Profit
