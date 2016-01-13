@@ -16,7 +16,7 @@
 ### Step five
     tmux
 #### now hit CTRL+B then wait then click SHIFT + 5
-##### this should split the screen in half you make want to make the termianal fullscreen
+##### this should split the screen in half; you may want to make the termianal fullscreen
 
 ### Step six
     vim ~/.bashrc
