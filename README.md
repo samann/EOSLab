@@ -1,5 +1,5 @@
 # EOS LAB
-## Brought to you by Spencer AKA The Destroyer
+## Brought to you by Spencer Amann
 
 ### Step one
     mkdir ~/bin && cd ~/bin
