@@ -1,5 +1,6 @@
 # EOS LAB
 ## Brought to you by Spencer Amann
+[Link for Bash Tutorial](https://www.linux.com/learn/how-make-fancy-and-useful-bash-prompt-linux)
 
 ### Step one
     mkdir ~/bin && cd ~/bin
